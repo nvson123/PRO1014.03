@@ -37,7 +37,7 @@
                   </div>
                 </div>
               </div>
-              <h2 class="slider-text-shape">NEW 2021</h2>
+              <h2 class="slider-text-shape">NEW 2024</h2>
             </div>
           </div>
           <div class="swiper-slide">

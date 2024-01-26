@@ -11,7 +11,7 @@
     <meta name="keywords" content="footwear, shoes, modern, shop, store, ecommerce, responsive, e-commerce"/>
     <meta name="author" content="codecarnival"/>
 
-    <title>Checkout :: Shome - Shoes eCommerce Website Template</title>
+    <title>SHOES Store</title>
 
     <!--== Favicon ==-->
     <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon" />
@@ -58,7 +58,7 @@
             <div class="header-top-align">
               <div class="header-top-align-start">
                 <div class="desc">
-                  <p>World Wide Completely Free Returns and Free Shipping</p>
+                  <p>We have the perfect shoe for every foot</p>
                 </div>
               </div>
               <div class="header-top-align-end">
@@ -67,7 +67,7 @@
                     <ul>
                       <li class="number"><i class="fa fa-phone"></i><a href="tel://0123456789">+00 123 456 789</a></li>
                       <li class="email"><i class="fa fa-envelope"></i><a href="mailto://demo@example.com">demo@example.com</a></li>
-                      <li class="account"><i class="fa fa-user"></i><a href="account-login.html">Account</a></li>
+                      <li class="account"><i class="fa fa-user"></i><a href="index.php?act=account">Account</a></li>
                     </ul>
                   </div>
                 </div>
@@ -84,8 +84,8 @@
             <div class="header-middle-align">
               <div class="header-middle-align-start">
                 <div class="header-logo-area">
-                  <a href="index.html">
-                    <img class="logo-main" src="assets/img/logo.webp" width="131" height="34" alt="Logo" />
+                  <a href="index.php">
+                    <img class="logo-main" src="assets/img/shoes.webp" width="131" height="34" alt="Logo" />
                     <img class="logo-light" src="assets/img/logo-light.webp" width="131" height="34" alt="Logo" />
                   </a>
                 </div>
@@ -104,7 +104,7 @@
                     <button class="shopping-search-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#AsideOffcanvasSearch" aria-controls="AsideOffcanvasSearch"><i class="pe-7s-search icon"></i></button>
                   </div>
                   <div class="shopping-wishlist">
-                    <a class="shopping-wishlist-btn" href="shop-wishlist.html">
+                    <a class="shopping-wishlist-btn" href="index.php?act=wishlist">
                       <i class="pe-7s-like icon"></i>
                     </a>
                   </div>
@@ -131,24 +131,24 @@
             <div class="header-align">
               <div class="header-navigation-area position-relative">
                 <ul class="main-menu nav">
-                  <li class="has-submenu"><a href="#/"><span>Home</span></a>
-                    <ul class="submenu-nav">
+                  <li ><a href="index.php"><span>Home</span></a>
+                    <!-- <ul class="submenu-nav">
                       <li><a href="index.html"><span>Home One</span></a></li>
                       <li><a href="index-two.html"><span>Home Two</span></a></li>
-                    </ul>
+                    </ul> -->
                   </li>
-                  <li><a href="about-us.html"><span>About</span></a></li>
+                  <li><a href="index.php?act=about"><span>About</span></a></li>
                   <li class="has-submenu"><a href="#/"><span>Pages</span></a>
                     <ul class="submenu-nav">
-                      <li><a href="account.html"><span>Account</span></a></li>
-                      <li><a href="account-login.html"><span>Login</span></a></li>
-                      <li><a href="account-register.html"><span>Register</span></a></li>
-                      <li><a href="page-not-found.html"><span>Page Not Found</span></a></li>
+                      <li><a href="index.php?act=account"><span>Account</span></a></li>
+                      <li><a href="index.php?act=login"><span>Login</span></a></li>
+                      <li><a href="index.php?act=dangky"><span>Register</span></a></li>
+                      <!-- <li><a href="page-not-found.html"><span>Page Not Found</span></a></li> -->
                     </ul>
                   </li>
-                  <li class="has-submenu position-static"><a href="#/"><span>Shop</span></a>
-                    <ul class="submenu-nav submenu-nav-mega column-3">
-                      <li class="mega-menu-item"><a href="#/" class="mega-title"><span>Shop Layout</span></a>
+                  <li class="has-submenu position-static"><a href="index.php?act=shop"><span>Shop</span></a>
+                    <ul class="submenu-nav submenu-nav-mega align-items-center justify-content-center ">
+                      <!-- <li class="mega-menu-item"><a href="#/" class="mega-title"><span>Shop Layout</span></a>
                         <ul>
                           <li><a href="shop-three-columns.html"><span>Shop 3 Column</span></a></li>
                           <li><a href="shop-four-columns.html"><span>Shop 4 Column</span></a></li>
@@ -163,19 +163,19 @@
                           <li><a href="single-group-product.html"><span>Single Product Group</span></a></li>
                           <li><a href="single-affiliate-product.html"><span>Single Product Affiliate</span></a></li>
                         </ul>
-                      </li>
+                      </li> -->
                       <li class="mega-menu-item"><a href="#/" class="mega-title"><span>Others Pages</span></a>
                         <ul>
-                          <li><a href="shop-cart.html"><span>Shopping Cart</span></a></li>
-                          <li><a href="shop-checkout.html"><span>Checkout</span></a></li>
-                          <li><a href="shop-wishlist.html"><span>Wishlist</span></a></li>
-                          <li><a href="shop-compare.html"><span>Compare</span></a></li>
+                          <li><a href="index.php?act=cart"><span>Shopping Cart</span></a></li>
+                          <li><a href="index.php?act=checkout"><span>Checkout</span></a></li>
+                          <li><a href="index.php?act=wishlist"><span>Wishlist</span></a></li>
+                          <li><a href="index.php?act=compare"><span>Compare</span></a></li>
                         </ul>
                       </li>
                     </ul>
                   </li>
-                  <li class="has-submenu"><a href="#/"><span>Blog</span></a>
-                    <ul class="submenu-nav submenu-nav-mega">
+                  <li class=""><a href="index.php?act=blog"><span>Blog</span></a>
+                    <!-- <ul class="submenu-nav submenu-nav-mega">
                       <li class="mega-menu-item"><a href="#/" class="mega-title">Blog Layout</a>
                         <ul>
                           <li><a href="blog.html">Blog Grid</a></li>
@@ -190,9 +190,9 @@
                           <li><a href="blog-details.html">Blog Details Right Sidebar</a></li>
                         </ul>
                       </li>
-                    </ul>
+                    </ul> -->
                   </li>
-                  <li><a href="contact.html"><span>Contact</span></a></li>
+                  <li><a href="index.php?act=contact"><span>Contact</span></a></li>
                 </ul>
               </div>
             </div>

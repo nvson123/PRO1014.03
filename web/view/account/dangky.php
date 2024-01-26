@@ -55,7 +55,7 @@
                   </div>
                   <div class="col-12">
                     <div class="form-group mb--0">
-                      <a class="btn-register" href="shop.html">Register</a>
+                      <a class="btn-register" href="index.php">Register</a>
                     </div>
                   </div>
                 </div>

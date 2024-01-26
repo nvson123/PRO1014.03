@@ -1,4 +1,5 @@
 <?php
+include "../model/pdo.php";
 include "header.php";
 include "aside.php";
 if (isset($_GET['act']) && ($_GET['act'] != "")) {
@@ -8,8 +9,14 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             include "addProducts.php";
             break;
         case "caterogies":
-            include "caterogies.php";
+            include "danhmuc/caterogies.php";
             break;
+        case "addCaterogies";
+            include "danhmuc/addCaterogies.php";
+            break;
+
+
+
         case "products":
             include "products";
             break;

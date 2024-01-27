@@ -8,7 +8,7 @@
               <h2 class="title" data-aos="fade-down" data-aos-duration="1000">Product Page</h2>
               <nav class="breadcrumb-area" data-aos="fade-down" data-aos-duration="1200">
                 <ul class="breadcrumb">
-                  <li><a href="index.html">Home</a></li>
+                  <li><a href="index.php">Home</a></li>
                   <li class="breadcrumb-sep">//</li>
                   <li>Product Page</li>
                 </ul>
@@ -796,13 +796,24 @@
                 <h4 class="sidebar-title">Top Categories</h4>
                 <div class="sidebar-category">
                   <ul class="category-list mb--0">
-                    <li><a href="shop.html">Shoes <span>(6)</span></a></li>
+
+                  
+                    <!-- <li><a href="shop.html">Shoes <span>(6)</span></a></li>
                     <li><a href="shop.html">Computer <span>(4)</span></a></li>
                     <li><a href="shop.html">Covid-19 <span>(2)</span></a></li>
                     <li><a href="shop.html">Electronics <span>(6)</span></a></li>
                     <li><a href="shop.html">Frame Sunglasses <span>(12)</span></a></li>
                     <li><a href="shop.html">Furniture <span>(7)</span></a></li>
-                    <li><a href="shop.html">Genuine Leather <span>(9)</span></a></li>
+                    <li><a href="shop.html">Genuine Leather <span>(9)</span></a></li> -->
+<?php
+foreach ($categories as $key => $top10cate) {
+  extract($top10cate);
+
+  
+}
+
+?>
+
                   </ul>
                 </div>
               </div>

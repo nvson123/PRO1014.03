@@ -17,6 +17,8 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             // }
             // // $dssp = loadall_sanpham($kyw, $iddm);
             // // $tendm = load_ten_dm($iddm);
+
+            
             include "view/products/shop.php";
             break;
 

@@ -1,36 +1,53 @@
 <div class="main-content">
-                <h3 class="title-page">
-                    Danh mục
-                </h3>
-                <div class="d-flex justify-content-end">
-                    <a href="index.php?act=addCaterogies" class="btn btn-primary mb-2">Thêm danh mục</a>
-                </div>
-                <table id="example" class="table table-striped" style="width:100%">
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Position</th>
-                            <th>Office</th>
-                            <th>Age</th>
-                            <th>Start date</th>
-                            <th>Salary</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Tiger Nixon</td>
-                            <td>System Architect</td>
-                            <td>Edinburgh</td>
-                            <td>61</td>
-                            <td>2011-04-25</td>
-                            <td>
-                                <a href="#" class="btn btn-warning"><i
-                                        class="fa-solid fa-pen-to-square"></i> Sửa</a>
-                                <a href="#" class="btn btn-danger"><i
-                                        class="fa-solid fa-trash"></i> Xóa</a>
-                            </td>
-                        </tr>
-                        <tr>
+    <h3 class="title-page">
+        Danh mục
+    </h3>
+    <div class="d-flex justify-content-end">
+        <a href="index.php?act=addCaterogies" class="btn btn-primary mb-2">Thêm danh mục</a>
+    </div>
+    <table id="example" class="table table-striped" style="width:100%">
+        <thead>
+            <tr>
+                <th>ID danh mục</th>
+                <!-- <th></th> -->
+                <th>Tên danh mục</th>
+                <!-- <th>Age</th> -->
+                <!-- <th>Start date</th> -->
+                <!-- <th>Salary</th> -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Tiger Nixon</td>
+                <!-- <td>System Architect</td> -->
+                <td>Edinburgh</td>
+                <!-- <td>61</td>
+                            <td>2011-04-25</td> -->
+                <td>
+                    <a href="#" class="btn btn-warning"><i class="fa-solid fa-pen-to-square"></i> Sửa</a>
+                    <a href="#" class="btn btn-danger"><i class="fa-solid fa-trash"></i> Xóa</a>
+                </td>
+            </tr>
+
+            <?php
+            foreach ($categories as $key => $show) {
+                extract($show);
+                $suadm = "index.php?act=suadm&id=" . $id;
+                $xoadm = "index.php?act=xoadm&id=" . $id;
+                echo '  <tr>
+                <td>'.$id.'</td>
+                <td>'.$name.'</td>
+                <td>
+                    <a href="#" class="btn btn-warning"><i class="fa-solid fa-pen-to-square"></i> Sửa</a>
+                    <a href="#" class="btn btn-danger"><i class="fa-solid fa-trash"></i> Xóa</a>
+                </td>
+            </tr>';
+            }
+            ;
+
+            ?>
+
+            <!-- <tr>
                             <td>Garrett Winters</td>
                             <td>Accountant</td>
                             <td>Tokyo</td>
@@ -120,17 +137,17 @@
                                 <a href="#" class="btn btn-danger"><i
                                         class="fa-solid fa-trash"></i> Xóa</a>
                             </td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <th>Name</th>
-                            <th>Position</th>
-                            <th>Office</th>
-                            <th>Age</th>
-                            <th>Start date</th>
-                            <th>Salary</th>
-                        </tr>
-                    </tfoot>
-                </table>
-            </div>
+                        </tr> -->
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+            </tr>
+        </tfoot>
+    </table>
+</div>

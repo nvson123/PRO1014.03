@@ -5,8 +5,22 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
     $act = $_GET['act'];
     switch ($act) {
         case "shop":
-            include "view/products/sanpham.php";
+            // if (isset($_POST['keyword']) && $_POST['keyword'] != 0) {
+            //     $kyw = $_POST['keyword'];
+            // } else {
+            //     $kyw = "";
+            // }
+            // if (isset($_GET['iddm']) && ($_GET['iddm'] > 0)) {
+            //     $iddm = $_GET['iddm'];
+            // } else {
+            //     $iddm = 0;
+            // }
+            // // $dssp = loadall_sanpham($kyw, $iddm);
+            // // $tendm = load_ten_dm($iddm);
+            include "view/products/shop.php";
             break;
+
+        // include "./view/products/sanpham.php";
         case "account":
             include "view/account/account.php";
             break;
@@ -29,7 +43,10 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
         case "contact":
             include "view/contact.php";
             break;
+        case "compare":
 
+            include "view/products/compare-product.php";
+            break;
         case "wishlist":
             include "view/products/wishlist.php";
             break;
@@ -38,6 +55,9 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
             break;
         case "about":
             include "view/about.php";
+            break;
+        case "blog":
+            include "view/blog/blog.php";
             break;
 
     }

@@ -5,12 +5,12 @@
         <div class="row">
           <div class="col-12">
             <div class="page-header-content">
-              <h2 class="title" data-aos="fade-down" data-aos-duration="1000">Register</h2>
+              <h2 class="title" data-aos="fade-down" data-aos-duration="1000">Login</h2>
               <nav class="breadcrumb-area" data-aos="fade-down" data-aos-duration="1200">
                 <ul class="breadcrumb">
                   <li><a href="index.html">Home</a></li>
                   <li class="breadcrumb-sep">//</li>
-                  <li>Register</li>
+                  <li>Login</li>
                 </ul>
               </nav>
             </div>
@@ -26,25 +26,19 @@
         <div class="row">
           <div class="col-sm-8 m-auto">
             <div class="section-title text-center">
-              <h2 class="title">Register</h2>
+              <h2 class="title">Login</h2>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-12">
-            <div class="register-form-content">
+            <div class="login-form-content">
               <form action="#">
                 <div class="row">
                   <div class="col-12">
                     <div class="form-group">
-                      <label for="username">Username <span class="required">*</span></label>
+                      <label for="username">Username or email address <span class="required">*</span></label>
                       <input id="username" class="form-control" type="email">
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <div class="form-group">
-                      <label for="email">Email address <span class="required">*</span></label>
-                      <input id="email" class="form-control" type="email">
                     </div>
                   </div>
                   <div class="col-12">
@@ -54,8 +48,19 @@
                     </div>
                   </div>
                   <div class="col-12">
-                    <div class="form-group mb--0">
-                      <a class="btn-register" href="shop.html">Register</a>
+                    <div class="form-group">
+                      <a class="btn-login" href="account.html">Login</a>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-group account-info-group mb--0">
+                      <div class="rememberme-account">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                          <label class="form-check-label" for="defaultCheck1">Remember me</label>
+                        </div>
+                      </div>
+                      <a class="lost-password" href="#/">Lost your password?</a>
                     </div>
                   </div>
                 </div>

@@ -1,20 +1,22 @@
 <div class="main-content">
-                <h3 class="title-page">
-                    Thêm danh mục
-                </h3>
-                
-                <form class="addPro" action="" method="POST" enctype="multipart/form-data">
-                    <!-- <div class="form-group">
+    <h3 class="title-page">
+        Thêm danh mục
+    </h3>
+
+    <form class="addPro" action="index.php?act=addCaterogies" method="POST" enctype="multipart/form-data">
+        <!-- <div class="form-group">
                         <label for="exampleInputFile">Ảnh sản phẩm</label>
                         <div class="custom-file">
                             <input type="file" name="image" class="custom-file-input" id="exampleInputFile">
                         </div>
                     </div> -->
-                    <div class="form-group">
-                        <label for="name">Tên danh mục:</label>
-                        <input type="text" class="form-control" name="name" id="name" placeholder="Nhập danh mục">
-                    </div>
-                    <!-- <div class="form-group">
+        <div class="form-group">
+            <label for="name">Tên danh mục:</label>
+            <input type="text" class="form-control" name="categories" id="name" placeholder="Nhập tên danh mục"
+                required>
+
+        </div>
+        <!-- <div class="form-group">
                         <label for="categories">Danh mục:</label>
                         <select class="form-select" aria-label="Default select example">
                             <option selected>Chọn danh mục</option>
@@ -23,7 +25,7 @@
                             <option value="3">Danh mục 3</option>
                           </select>
                     </div> -->
-                    <!-- <div class="form-group">
+        <!-- <div class="form-group">
                         <label for="price">Giá gốc:</label>
                         <div class="input-group mb-3">
                             <div class="input-group-append">
@@ -47,13 +49,18 @@
                         <textarea class="form-control" name="description" rows="3"
                             placeholder="Nhập 1 đoạn mô tả ngắn về sản phẩm" style="height: 78px;"></textarea>
                     </div> -->
-                    <!-- <div class="form-group">
+        <!-- <div class="form-group">
                         <label>Mô tả chi tiết</label>
                         <textarea class="form-control" name="detail" rows="3"
                             placeholder="Nhập 1 đoạn mô tả ngắn về sản phẩm" style="height: 78px;"></textarea>
                     </div> -->
-                    <div class="form-group">
-                        <button type="submit" name="submit" class="btn btn-primary">Thêm danh mục</button>
-                    </div>
-                </form>
-            </div>
+        <div class="form-group">
+            <button type="submit" name="submit" class="btn btn-primary">Thêm danh mục</button>
+            <a href="index.php?act=caterogies" type="button">Danh sách danh mục</a>
+        </div>
+        <?php
+        if (isset($thongbao) && ($thongbao != ""))
+            echo $thongbao;
+        ?>
+    </form>
+</div>

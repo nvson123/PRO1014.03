@@ -21,25 +21,24 @@
 </head>
 
 <body>
-    <div class="container-fluid main-page">
+    <div class="container-fluid">
+        <div class="col-xl-4 form-login">
+            <div class="card form-gr">
+                <form>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
 
-        <div class="app-main">
-            <nav class="sidebar bg-primary">
-                <ul>
-                    <li>
-                        <a href="index.php"><i class="fa-solid fa-house ico-side"></i>Dashboards</a>
-                    </li>
-                    <li>
-                        <a href="order.html"><i class="fa-solid fa-cart-shopping ico-side"></i>Quản kí đơn hàng</a>
-                    </li>
-                    <li>
-                        <a href="index.php?url=list-category"><i class="fa-solid fa-folder-open ico-side"></i>Quản lí danh muc</a>
-                    </li>
-                    <li>
-                        <a href="index.php?url=list-product"><i class="fa-solid fa-mug-hot ico-side"></i>Quản lí sản phẩm</a>
-                    </li>
-                    <li>
-                        <a href="index.php?url=list-user"><i class="fa-solid fa-user ico-side"></i>Quản lí thành viên</a>
-                    </li>
-                </ul>
-            </nav>
+</html>

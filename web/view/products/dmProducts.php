@@ -10,7 +10,7 @@
               <ul class="breadcrumb">
                 <li><a href="index.php">Home</a></li>
                 <li class="breadcrumb-sep">//</li>
-                <li>Product Page</li>
+                <li> Sản phẩm: <?=$nameCategory?></li>
               </ul>
             </nav>
           </div>
@@ -62,7 +62,7 @@
                 <div class="tab-pane fade show active" id="nav-grid" role="tabpanel" aria-labelledby="nav-grid-tab">
                   <div class="row">
                     <?php
-                    foreach ($loadProductAll as $sp) {
+                    foreach ($dmProducts as $sp) {
 
                       extract($sp);
                       $hinh = $img_path . $image;
@@ -84,7 +84,9 @@
                 <div class="product-action">
                   <a class="btn-product-wishlist" href="shop-wishlist.html"><i class="fa fa-heart"></i></a>
                   <a class="btn-product-cart" href="shop-cart.html"><i class="fa fa-shopping-cart"></i></a>
-                 
+                  <button type="button" class="btn-product-quick-view-open">
+                    <i class="fa fa-arrows"></i>
+                  </button>
                   <a class="btn-product-compare" href="shop-compare.html"><i class="fa fa-random"></i></a>
                 </div>
                 <a class="banner-link-overlay" href="shop.html"></a>
@@ -92,7 +94,7 @@
               <div class="product-info">
                 <div class="category">
                   <ul>
-                    <li><a href="shop.html">' . $category_name . '</a></li>
+                    <li><a href="shop.html">' . $nameCategory . '</a></li>
                     <li class="sep">/</li>
                     
                   </ul>
@@ -125,7 +127,7 @@
                   <div class="row">
 
                     <?php
-                    foreach ($loadProductAll as $sp) {
+                    foreach ($dmProducts as $sp) {
                       extract($sp);
                       $hinh = $img_path . $image;
 
@@ -147,7 +149,9 @@
                             <div class="product-action">
                               <a class="btn-product-wishlist" href="index.php?act=wishlist"><i class="fa fa-heart"></i></a>
                               <a class="btn-product-cart" href="shop-cart.html"><i class="fa fa-shopping-cart"></i></a>
-                              
+                              <button type="button" class="btn-product-quick-view-open">
+                                <i class="fa fa-arrows"></i>
+                              </button>
                               <a class="btn-product-compare" href="shop-compare.html"><i class="fa fa-random"></i></a>
                             </div>
                             <a class="banner-link-overlay" href="shop.html"></a>
@@ -155,14 +159,14 @@
                           <div class="product-info">
                             <div class="category">
                               <ul>
-                                <li><a href="shop.html">' . $category_name . '</a></li>
+                                <li><a href="shop.html">' . $nameCategory . '</a></li>
                                 <li class="sep">/</li>
                                
                               </ul>
                             </div>
                             <h4 class="title"><a href="' . $linkSP . '">' . $name . '</a></h4>
                             <div class="prices">
-                            <span class="price-old">$' . $price . '</span>
+                             
                               <span class="sep"></span>
                               <span class="price">$' . $price * (100 - $discount) / 100 . '</span>
                             </div>

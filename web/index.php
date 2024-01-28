@@ -1,5 +1,13 @@
 <?php
 include "view/header.php";
+include "model/products.php";
+include "global.php";
+include "model/pdo.php";
+include "model/categories.php";
+
+
+$topCategories = loadall_categories();
+$loadProductAll = loadall_products_home();
 // include "view/products/shop.php";
 if (isset($_GET['act']) && ($_GET['act'] != "")) {
     $act = $_GET['act'];
@@ -35,12 +43,25 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
 
 
         case "ctsp":
-            // if (condition) {
-            //     # code...
-            // }else{
-            include "view/products/chitietsanpham.php";
+            if (isset($_GET['id']) && $_GET['id'] > 0) {
+                $product = loadone_product($_GET['id']);
+                // $sanphamcl = load_sanpham_cungloai($_GET['idsp'], $sanpham['iddm']);
+                // $binhluan = loadall_binhluan($_GET['idsp']);
+                include "view/products/chitietsanpham.php";
+            } else {
+                include "view/home.php";
+            }
             break;
-        // }
+            case "dmProducts":
+                if (isset($_GET['iddm']) && $_GET['iddm'] > 0) {
+                    $dmProducts = loadAll_dmProducts($_GET['iddm']);
+                    $nameCategory = loadone($_GET['iddm']);
+                    include "view/products/dmProducts.php"; 
+                } else {
+                    include "view/home.php";
+                }
+                break;
+        
 
         case "contact":
             include "view/contact.php";
@@ -64,6 +85,7 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
 
     }
 } else {
+    
     include "view/home.php";
 }
 include "view/aside.php";

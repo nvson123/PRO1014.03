@@ -73,11 +73,8 @@
       <!-- Mobile Menu Start -->
       <div class="mobile-menu-items">
         <ul class="nav-menu">
-          <li><a href="#">Home</a>
-            <ul class="sub-menu">
-              <li><a href="index.html">Home One</a></li>
-              <li><a href="index-two.html">Home Two</a></li>
-            </ul>
+          <li><a href="index.php">Home</a>
+            
           </li>
           <li><a href="about-us.html">About</a></li>
           <li><a href="#">Pages</a>

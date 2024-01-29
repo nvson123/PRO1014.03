@@ -135,7 +135,15 @@
                         <input type="text" title="Quantity" value="1">
                       </div>
                     </div>
-                    <a class="btn-theme" href="shop-cart.html">Add to Cart</a>
+                    <form action="index.php?act=addToCart" method="POST">
+                    <input type="submit" name="addtocart" class="btn-theme" value="Thêm vào giỏ hàng">
+                    <input type="hidden" name="id" value="<?=$id?>">
+                    <input type="hidden"name="name" value="<?=$name?>">
+                    <input type="hidden"name="price" value="<?=$price* (100-$discount)/100?>">
+                    <input type="hidden"name="img" value="<?=$image?>">
+                    <!-- <input type="hidden"name="quantity" value=""> -->
+                    </form>
+                    
                   </div>
                   <div class="product-wishlist-compare">
                     <a href="shop-wishlist.html"><i class="pe-7s-like"></i>Add to Wishlist</a>

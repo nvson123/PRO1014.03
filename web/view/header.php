@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="zxx">
-
-
 <!-- Mirrored from template.hasthemes.com/shome/shome/shop-checkout.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 20 Jan 2024 05:19:46 GMT -->
 <head>
     <meta charset="utf-8">

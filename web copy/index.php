@@ -8,13 +8,29 @@ include "model/categories.php";
 
 $topCategories = loadall_categories();
 $loadProductAll = loadall_products_home();
-
+// include "view/products/shop.php";
 if (isset($_GET['act']) && ($_GET['act'] != "")) {
     $act = $_GET['act'];
     switch ($act) {
-        case "shop":  
+        case "shop":
+            // if (isset($_POST['keyword']) && $_POST['keyword'] != 0) {
+            //     $kyw = $_POST['keyword'];
+            // } else {
+            //     $kyw = "";
+            // }
+            // if (isset($_GET['iddm']) && ($_GET['iddm'] > 0)) {
+            //     $iddm = $_GET['iddm'];
+            // } else {
+            //     $iddm = 0;
+            // }
+            // // $dssp = loadall_sanpham($kyw, $iddm);
+            // // $tendm = load_ten_dm($iddm);
+
+            
             include "view/products/shop.php";
             break;
+
+        // include "./view/products/sanpham.php";
         case "account":
             include "view/account/account.php";
             break;
@@ -29,6 +45,8 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
         case "ctsp":
             if (isset($_GET['id']) && $_GET['id'] > 0) {
                 $product = loadone_product($_GET['id']);
+                // $sanphamcl = load_sanpham_cungloai($_GET['idsp'], $sanpham['iddm']);
+                // $binhluan = loadall_binhluan($_GET['idsp']);
                 include "view/products/chitietsanpham.php";
             } else {
                 include "view/home.php";

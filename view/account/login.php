@@ -2,14 +2,7 @@
 if (isset($_SESSION['user'])) {
   //extract($_SESSION['user']);
 ?>
-  <!-- <div class="quanly">
-    <a href="index.php?act=viewcart">Đơn hàng của tôi</a> <br>
-    <a href="index.php?act=edit_taikhoan">Cập nhật tài khoản</a> <br>
-    <a href="admin/index.php">Đăng nhập Admin</a> <br>
-    <a href="index.php?act=doimk">Đổi mật khẩu</a> <br>
-    <a href="index.php?act=quenmk">Lấy lại mật khẩu</a> <br>
-    <a href="index.php?act=thoat">Đăng xuất</a>
-  </div> -->
+  
 <?php } else { ?>
 <main class="main-content">
     <!--== Start Page Header Area Wrapper ==-->

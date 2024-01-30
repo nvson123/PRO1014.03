@@ -1,6 +1,7 @@
 <?php
 ob_start();
 session_start();
+include "model/cart.php";
 include "model/pdo.php";
 include "view/header.php";
 include "model/products.php";
@@ -79,6 +80,23 @@ if (isset($_GET['act']) && ($_GET['act'] != "")) {
         case "checkout":
             include "view/checkout/checkout.php";
             break;
+        case "confirmOrder":
+            //tạo đơn hàng
+            if (isset($_POST['order']) && ($_POST['order'])){
+                $id_pro = $_POST('id_products');
+                $name = $_POST['name'];
+                $email = $_POST['email'];
+                $tel = $_POST['tel'];
+                $address = $_POST['address'];
+                $ngayDatHang=date('h:i:sa d/m/Y');
+                $tongDonHang = $tongDonHang();
+
+
+            }
+            break;
+
+
+
         case "contact":
             include "view/contact.php";
             break;

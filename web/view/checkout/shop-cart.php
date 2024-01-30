@@ -154,9 +154,9 @@
                     </tr> -->
                   <tr class="actions">
                     <td class="border-0" colspan="6">
-                      <button type="submit" class="update-cart" disabled>Update cart</button>
+                      <!-- <button type="submit" class="update-cart" disabled>Update cart</button> -->
                       <button type="submit" class="clear-cart">Clear Cart</button>
-                      <a href="shop.html" class="btn-theme btn-flat">Continue Shopping</a>
+                      <a href="index.php?act=shop" class="btn-theme btn-flat">Continue Shopping</a>
                     </td>
                   </tr>
                 </tbody>

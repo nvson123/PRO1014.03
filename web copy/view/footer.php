@@ -13,7 +13,7 @@
                     <img class="logo-main" src="assets/img/logo-light.webp" width="131" height="34" alt="Logo" />
                   </a>
                 </div>
-                <p class="desc">Lorem ipsum dolor sit amet consl adipisi elit, sed do eiusmod templ incididunt ut labore</p>
+                <p class="desc">Cửa hàng giày số 1 Việt Nam dành cho nam giới</p>
                 <div class="social-icons">
                   <a href="https://www.facebook.com/" target="_blank" rel="noopener"><i class="fa fa-facebook"></i></a>
                   <a href="https://dribbble.com/" target="_blank" rel="noopener"><i class="fa fa-dribbble"></i></a>
@@ -96,7 +96,7 @@
       <div class="container pt--0 pb--0">
         <div class="row">
           <div class="col-md-7 col-lg-6">
-            <p class="copyright">© 2021 Shome. Made with <i class="fa fa-heart"></i> by <a target="_blank" href="https://themeforest.net/user/codecarnival/portfolio">Codecarnival.</a></p>
+            <p class="copyright">© 2024 SHOES STORE <i class="fa fa-heart"></i> by <a target="_blank" href="#">TEAM 7</a></p>
           </div>
           <div class="col-md-5 col-lg-6">
             <div class="payment">

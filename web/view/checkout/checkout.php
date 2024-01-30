@@ -27,12 +27,16 @@
         <div class="col-12">
           <div class="checkout-page-login-wrap">
             <!--== Start Checkout Login Accordion ==-->
+
+
+
             <div class="login-accordion" id="LoginAccordion">
               <div class="card">
                 <h3>
                   <i class="fa fa-info-circle"></i>
-                  Returning customer?
-                  <a href="#/" data-bs-toggle="collapse" data-bs-target="#loginaccordion">Click here to login</a>
+                  Đã có tài khoản?
+                  <a href="index.php?act=login" data-bs-toggle="collapse" data-bs-target="#loginaccordion">Nhấp vào đây
+                    để đăng nhập</a>
                 </h3>
                 <div id="loginaccordion" class="collapse" data-bs-parent="#LoginAccordion">
                   <div class="card-body">
@@ -114,44 +118,53 @@
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-lg-6">
+      <form action="index.php?act=confirmOrder" method="post">
+        <div class="row">
+          <div class="col-lg-6">
 
 
 
-          <!--== Start Billing Accordion ==-->
+            <!--== Start Billing Accordion ==-->
 
-          <?php
-          // if(isset ($_SESSION['user'])){
-          
-          // }
-          
+            <?php
+            if (isset($_SESSION['user'])) {
+              $name = $_SESSION['user']['address'];
+              $address = $_SESSION['user']['address'];
+              $email = $_SESSION['user']['email'];
+              $tel = $_SESSION['user']['tel'];
+            } else {
+              $name = "";
+              $address = "";
+              $email = "";
+              $tel = "";
+            }
 
-          ?>
-          <div class="checkout-billing-details-wrap">
-            <h2 class="title">Billing details</h2>
-            <div class="billing-form-wrap">
-              <form action="#" method="post">
+
+            ?>
+            <div class="checkout-billing-details-wrap">
+              <h2 class="title">Billing details</h2>
+              <div class="billing-form-wrap">
+
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label for="f_name">First name <abbr class="required" title="required">*</abbr></label>
-                      <input id="f_name" type="text" class="form-control">
+                      <label for="f_name">Full Name <abbr class="required" title="required">*</abbr></label>
+                      <input id="f_name" type="text" name="name" class="form-control" value="<?= $name ?>">
                     </div>
                   </div>
-                  <div class="col-md-6">
+                  <!-- <div class="col-md-6">
                     <div class="form-group">
                       <label for="l_name">Last name <abbr class="required" title="required">*</abbr></label>
                       <input id="l_name" type="text" class="form-control">
                     </div>
-                  </div>
+                  </div> -->
                   <div class="col-md-12">
                     <div class="form-group">
                       <label for="com_name">Company name (optional)</label>
-                      <input id="com_name" type="text" class="form-control">
+                      <input id="com_name" name="com_name" type="text" class="form-control">
                     </div>
                   </div>
-                  <div class="col-md-12">
+                  <!-- <div class="col-md-12">
                     <div class="form-group">
                       <label for="country">Country <abbr class="required" title="required">*</abbr></label>
                       <select id="country" class="form-control">
@@ -168,28 +181,27 @@
                         <option>China</option>
                       </select>
                     </div>
-                  </div>
+                  </div> -->
                   <div class="col-md-12">
                     <div class="form-group">
-                      <label for="street-address">Street address <abbr class="required"
-                          title="required">*</abbr></label>
-                      <input id="street-address" type="text" class="form-control"
-                        placeholder="House number and street name">
+                      <label for="street-address"> address <abbr class="required" title="required">*</abbr></label>
+                      <input id="street-address" name="address" type="text" class="form-control"
+                        placeholder="House number and street name" value="<?= $address ?>">
                     </div>
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                       <label for="street-address2" class="visually-hidden">Street address 2 <abbr class="required"
                           title="required">*</abbr></label>
                       <input id="street-address2" type="text" class="form-control"
                         placeholder="Apartment, suite, unit etc. (optional)">
-                    </div>
+                    </div> -->
                   </div>
-                  <div class="col-md-12">
+                  <!-- <div class="col-md-12">
                     <div class="form-group">
                       <label for="town">Town / City <abbr class="required" title="required">*</abbr></label>
                       <input id="town" type="text" class="form-control">
                     </div>
-                  </div>
-                  <div class="col-md-12">
+                  </div> -->
+                  <!-- <div class="col-md-12">
                     <div class="form-group">
                       <label for="district">District <abbr class="required" title="required">*</abbr></label>
                       <select id="district" class="form-control">
@@ -205,23 +217,23 @@
                         <option>China</option>
                       </select>
                     </div>
-                  </div>
+                  </div> -->
                   <div class="col-md-12">
                     <div class="form-group">
                       <label for="pz-code">Postcode / ZIP (optional)</label>
-                      <input id="pz-code" type="text" class="form-control">
+                      <input id="pz-code" type="text" name="zip" class="form-control">
                     </div>
                   </div>
                   <div class="col-md-12">
                     <div class="form-group">
-                      <label for="phone">Phone (optional)</label>
-                      <input id="phone" type="text" class="form-control">
+                      <label for="phone" title="required">Phone *</label>
+                      <input id="phone" required name="tel" type="text" class="form-control" value="<?= $tel ?>">
                     </div>
                   </div>
                   <div class="col-md-12">
                     <div class="form-group" data-margin-bottom="30">
                       <label for="email">Email address <abbr class="required" title="required">*</abbr></label>
-                      <input id="email" type="text" class="form-control">
+                      <input id="email" type="text" name="mail" class="form-control" value="<?= $email ?>">
                     </div>
                   </div>
                   <div id="CheckoutBillingAccordion" class="col-md-12">
@@ -241,7 +253,7 @@
                       </div>
                     </div>
                   </div>
-                  <div id="CheckoutBillingAccordion2" class="col-md-12">
+                  <!-- <div id="CheckoutBillingAccordion2" class="col-md-12">
                     <div class="checkout-box" data-margin-bottom="25" data-bs-toggle="collapse"
                       data-bs-target="#CheckoutTwo" aria-expanded="false" role="toolbar">
                       <div class="custom-control custom-checkbox">
@@ -256,7 +268,7 @@
                       <div class="row">
                         <div class="col-md-6">
                           <div class="form-group">
-                            <label for="f_name2">First name <abbr class="required" title="required">*</abbr></label>
+                            <label for="f_name2">Full name <abbr class="required" title="required">*</abbr></label>
                             <input id="f_name2" type="text" class="form-control">
                           </div>
                         </div>
@@ -335,73 +347,102 @@
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
                   <div class="col-md-12">
                     <div class="form-group mb--0">
                       <label for="order-notes">Order notes (optional)</label>
-                      <textarea id="order-notes" class="form-control"
+                      <textarea id="order-notes" name="note" class="form-control"
                         placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
                     </div>
                   </div>
                 </div>
-              </form>
+
+              </div>
             </div>
+            <!--== End Billing Accordion ==-->
+
           </div>
-          <!--== End Billing Accordion ==-->
-        </div>
-        <div class="col-lg-6">
-          <!--== Start Order Details Accordion ==-->
-          <div class="checkout-order-details-wrap">
-            <div class="order-details-table-wrap table-responsive">
-              <h2 class="title mb-25">Your order</h2>
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th class="product-name">Product</th>
-                    <th class="product-total">Total</th>
+          <div class="col-lg-6" style="">
+            <!--== Start Order Details Accordion ==-->
+            <div class="checkout-order-details-wrap">
+              <div class="order-details-table-wrap table-responsive">
+                <h2 class="title mb-25">Đơn hàng của bạn</h2>
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th class="product-name">Tên sản phẩm</th>
+                      <th class="product-total">Tổng tiền</th>
+                    </tr>
+                  </thead>
+                  <tbody class="table-body">
+
+
+                    <?php global $img_path;
+                    //code wrote by nv son and youtube
+                    $tong = 0;
+                    $i = 0;
+                    foreach ($_SESSION['mycart'] as $cart) {
+                      $linkSP = "index.php?act=ctsp&id=" . $cart[0];
+                      $hinh = $img_path . $cart[2];
+                      $tong += $cart[5];
+                      // $xoasp= ' <a  href="index.php?act=delCart&idCart='.$i.'"><i class="fa fa-trash-o"></i></a>';
+                      $xoasp = "index.php?act=delCart&idCart=$i";
+                      echo '
+                    <tr class="cart-item">
+                    <input type="hidden" name="id_products"value="'.$cart[0].'">
+                    <td class="product-img"><img src="' . $hinh . '" width="60" height="80" alt="Image-HasTech"></td>
+                    <td class="product-name">' . $cart[1] . ' <span class="product-quantity">× ' . $cart[4] . '</span></td>
+                    <td class="product-total">' . $cart[5] . '</td>
                   </tr>
-                </thead>
-                <tbody class="table-body">
-                  <tr class="cart-item">
+                    ';
+                      $i += 1;
+                    }
+                    ?>
+                    <!-- <tr class="cart-item">
                     <td class="product-name">Satin gown <span class="product-quantity">× 1</span></td>
                     <td class="product-total">£69.99</td>
                   </tr>
                   <tr class="cart-item">
                     <td class="product-name">Printed cotton t-shirt <span class="product-quantity">× 1</span></td>
                     <td class="product-total">£20.00</td>
-                  </tr>
-                </tbody>
-                <tfoot class="table-foot">
-                  <tr class="cart-subtotal">
-                    <th>Subtotal</th>
-                    <td>£89.99</td>
-                  </tr>
-                  <tr class="shipping">
-                    <th>Shipping</th>
-                    <td>Flat rate: £2.00</td>
-                  </tr>
-                  <tr class="order-total">
-                    <th>Total </th>
-                    <td>£91.99</td>
-                  </tr>
-                </tfoot>
-              </table>
-              <div class="shop-payment-method">
-                <div id="PaymentMethodAccordion">
-                  <div class="card">
-                    <div class="card-header" id="check_payments">
-                      <h5 class="title" data-bs-toggle="collapse" data-bs-target="#itemOne" aria-controls="itemOne"
-                        aria-expanded="true">Direct bank transfer</h5>
-                    </div>
-                    <div id="itemOne" class="collapse show" aria-labelledby="check_payments"
-                      data-bs-parent="#PaymentMethodAccordion">
-                      <div class="card-body">
-                        <p>Make your payment directly into our bank account. Please use your Order ID as the payment
-                          reference. Your order will not be shipped until the funds have cleared in our account.</p>
+                  </tr> -->
+                  </tbody>
+                  <tfoot class="table-foot">
+                    <tr class="cart-subtotal">
+                      <th>Tạm tính</th>
+                      <td>$
+                        <?= $tong ?>
+                      </td>
+                    </tr>
+                    <tr class="shipping">
+                      <th>Vận chuyển:</th>
+                      <td> $
+                        <?php echo $ship = 30; ?>
+                      </td>
+                    </tr>
+                    <tr class="order-total">
+                      <th>Tổng số tiền thanh toán </th>
+                      <td>
+                        <?= ($tong + $ship) ?>
+                      <td>
+                    </tr>
+                  </tfoot>
+                </table>
+                <div class="shop-payment-method">
+                  <div id="PaymentMethodAccordion">
+                    <div class="card">
+                      <div class="card-header" id="check_payments">
+                        <h5 class="title" data-bs-toggle="collapse" data-bs-target="#itemOne" aria-controls="itemOne"
+                          aria-expanded="true">Chuyển khoản ngân hàng trực tiếp</h5>
+                      </div>
+                      <div id="itemOne" class="collapse show" aria-labelledby="check_payments"
+                        data-bs-parent="#PaymentMethodAccordion">
+                        <div class="card-body">
+                          <p>Chuyển khoản trực tiếp qua ngân hàng</p>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="card">
+                    <!-- <div class="card">
                     <div class="card-header" id="check_payments2">
                       <h5 class="title" data-bs-toggle="collapse" data-bs-target="#itemTwo" aria-controls="itemTwo"
                         aria-expanded="false">Check payments</h5>
@@ -413,49 +454,51 @@
                           Postcode.</p>
                       </div>
                     </div>
-                  </div>
-                  <div class="card">
-                    <div class="card-header" id="check_payments3">
-                      <h5 class="title" data-bs-toggle="collapse" data-bs-target="#itemThree" aria-controls="itemTwo"
-                        aria-expanded="false">Cash on delivery</h5>
+                  </div> -->
+                    <div class="card">
+                      <div class="card-header" id="check_payments3">
+                        <h5 class="title" data-bs-toggle="collapse" data-bs-target="#itemThree" aria-controls="itemTwo"
+                          aria-expanded="false">Thanh toán khi nhận hàng</h5>
+                      </div>
+                      <div id="itemThree" class="collapse" aria-labelledby="check_payments3"
+                        data-bs-parent="#PaymentMethodAccordion">
+                        <div class="card-body">
+                          <p>Nhận hàng và thành toán bằng tiền mặt.</p>
+                        </div>
+                      </div>
                     </div>
-                    <div id="itemThree" class="collapse" aria-labelledby="check_payments3"
-                      data-bs-parent="#PaymentMethodAccordion">
-                      <div class="card-body">
-                        <p>Pay with cash upon delivery.</p>
+                    <div class="card">
+                      <div class="card-header" id="check_payments4">
+                        <h5 class="title" data-bs-toggle="collapse" data-bs-target="#itemFour" aria-controls="itemTwo"
+                          aria-expanded="false">PayPal Express Checkout <img src="assets/img/photos/paypal2.webp"
+                            width="40" height="26" alt="Image-HasTech"></h5>
+                      </div>
+                      <div id="itemFour" class="collapse" aria-labelledby="check_payments4"
+                        data-bs-parent="#PaymentMethodAccordion">
+                        <div class="card-body">
+                          <p>Thanh toán bằng PayPal. Bạn phải có tài khoản PayPal để thanh toán.</p>
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <div class="card">
-                    <div class="card-header" id="check_payments4">
-                      <h5 class="title" data-bs-toggle="collapse" data-bs-target="#itemFour" aria-controls="itemTwo"
-                        aria-expanded="false">PayPal Express Checkout <img src="assets/img/photos/paypal2.webp"
-                          width="40" height="26" alt="Image-HasTech"></h5>
-                    </div>
-                    <div id="itemFour" class="collapse" aria-labelledby="check_payments4"
-                      data-bs-parent="#PaymentMethodAccordion">
-                      <div class="card-body">
-                        <p>Pay via PayPal; you can pay with your credit card if you don’t have a PayPal account.</p>
-                      </div>
+                  <p class="p-text">Thông tin của bạn sẽ được sử dụng để cung cấp cho bên vận chuyển, hỗ trợ khách hàng
+                    và
+                    các mục ở <a href="#/">chính sách bảo mật.</a></p>
+                  <div class="agree-policy">
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" id="privacy" class="custom-control-input visually-hidden">
+                      <label for="privacy" class="custom-control-label">I have read and agree to the website terms and
+                        conditions <span class="required">*</span></label>
                     </div>
                   </div>
+                  <input type="submit" name="order" class="btn-theme" value="Đặt hàng">
                 </div>
-                <p class="p-text">Your personal data will be used to process your order, support your experience
-                  throughout this website, and for other purposes described in our <a href="#/">privacy policy.</a></p>
-                <div class="agree-policy">
-                  <div class="custom-control custom-checkbox">
-                    <input type="checkbox" id="privacy" class="custom-control-input visually-hidden">
-                    <label for="privacy" class="custom-control-label">I have read and agree to the website terms and
-                      conditions <span class="required">*</span></label>
-                  </div>
-                </div>
-                <a href="account-login.html" class="btn-theme">Place order</a>
               </div>
             </div>
+            <!--== End Order Details Accordion ==-->
           </div>
-          <!--== End Order Details Accordion ==-->
         </div>
-      </div>
+      </form>
     </div>
   </section>
   <!--== End Shopping Checkout Area Wrapper ==-->

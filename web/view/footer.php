@@ -10,15 +10,13 @@
               <div class="about-widget-wrap">
                 <div class="widget-logo-area">
                   <a href="index.html">
-                    <img class="logo-main" src="assets/img/logo-light.webp" width="131" height="34" alt="Logo" />
+                    <img class="logo-main" src="assets/img/shoes-high-resolution-logo-white-transparent.png" width="131" height="34" alt="Logo" />
                   </a>
                 </div>
-                <p class="desc">Lorem ipsum dolor sit amet consl adipisi elit, sed do eiusmod templ incididunt ut labore</p>
+                <p class="desc">SHOES STORE cửa hàng giày số 1 Việt Nam dành cho nam giới</p>
                 <div class="social-icons">
                   <a href="https://www.facebook.com/" target="_blank" rel="noopener"><i class="fa fa-facebook"></i></a>
-                  <a href="https://dribbble.com/" target="_blank" rel="noopener"><i class="fa fa-dribbble"></i></a>
-                  <a href="https://www.pinterest.com/" target="_blank" rel="noopener"><i class="fa fa-pinterest-p"></i></a>
-                  <a href="https://twitter.com/" target="_blank" rel="noopener"><i class="fa fa-twitter"></i></a>
+                  
                 </div>
               </div>
             </div>
@@ -57,7 +55,7 @@
                       <li><a href="account-login.html">My Account</a></li>
                       <li><a href="contact.html">Contact</a></li>
                       <li><a href="shop-cart.html">Shopping cart</a></li>
-                      <li><a href="shop.html">Shop</a></li>
+                      <li><a href="index.php?act=shop">Shop</a></li>
                       <li><a href="account-login.html">Services Login</a></li>
                     </ul>
                   </div>
@@ -96,7 +94,7 @@
       <div class="container pt--0 pb--0">
         <div class="row">
           <div class="col-md-7 col-lg-6">
-            <p class="copyright">© 2021 Shome. Made with <i class="fa fa-heart"></i> by <a target="_blank" href="https://themeforest.net/user/codecarnival/portfolio">Codecarnival.</a></p>
+            <p class="copyright">© 2024 SHOES STORE <i class="fa fa-heart"></i> by <a target="_blank" href="#">TEAM 7</a></p>
           </div>
           <div class="col-md-5 col-lg-6">
             <div class="payment">
@@ -145,5 +143,5 @@
 </body>
 
 
-<!-- Mirrored from template.hasthemes.com/shome/shome/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 20 Jan 2024 05:19:27 GMT -->
+
 </html>
